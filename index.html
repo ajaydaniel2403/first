@@ -1,9 +1,31 @@
 <html>
-  <head>
-    <title> Hello World </title>
-    
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<head>
+<title>
+Hello World
+</title>
+
+</head>
+<body>
+
+<h1 id="original"></h1>
+<h1 id="updated"></h1>
+
+<script>
+const ar = [1,2,1,2,3,1,2,1,4,1]
+
+document.getElementById("original").innerHTML =ar;
+
+for(let i =0;i<ar.length;i++){
+for(letj=ar.length;j>i;j--){
+if(ar[j]==1){
+var temp = ar[j]
+ar[j] = ar[i]
+ar[i] = temp
+
+}
+}
+}
+document.getElementById("updated").innerHTML = "Hello World";
+</script>
+</body>
 </html>
